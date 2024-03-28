@@ -2057,6 +2057,7 @@ _SlReturnVal_t _SlSocketHandleAsync_StartTLS(void *pVoidBuf)
 
     if(ActionIndex == MAX_CONCURRENT_ACTIONS)
     {
+       SL_DRV_PROTECTION_OBJ_UNLOCK();
        return EVENT_PROPAGATION_CONTINUE;
     }
 
